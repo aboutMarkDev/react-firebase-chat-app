@@ -1,5 +1,7 @@
 // const flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette").default;
 
+import tailwindcssAnimate from "tailwindcss-animate";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
@@ -58,7 +60,7 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 };
 
 // // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
