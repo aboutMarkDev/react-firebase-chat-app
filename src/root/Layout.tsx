@@ -1,5 +1,7 @@
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
 import { auth, db } from "@/lib/firebase";
 import useUserStore from "@/store/userStore";
 import { onAuthStateChanged } from "firebase/auth";
@@ -73,10 +75,12 @@ export default function Layout() {
   }, [currentUser?.id, users]);
 
   return (
-    <main className="h-screen flex-between flex-col">
+    <main className="h-screen flex-between flex-col relative">
       {isLoading ? <Loader /> : <Outlet />}
 
       <Footer />
+      <ShootingStars className="-z-50" />
+      <StarsBackground className="-z-50" />
     </main>
   );
 }

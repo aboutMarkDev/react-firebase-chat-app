@@ -53,7 +53,7 @@ export default function HomeHeader() {
 
         <div className="flex items-center gap-1">
           <img
-            src="/assets/logowithbg.png"
+            src="/assets/chitchatlogo.png"
             alt=""
             width={50}
             height={50}

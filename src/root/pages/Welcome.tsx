@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import WelcomeHeader from "@/components/WelcomeHeader";
 import useUserStore from "@/store/userStore";
 import { Link, Navigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Welcome() {
   const { currentUser } = useUserStore();
@@ -12,8 +13,16 @@ export default function Welcome() {
   return (
     <section className="gap-5 flex flex-col relative">
       <WelcomeHeader />
-      <section className="flex max-md:flex-col gap-3">
-        <div className="w-full flex-center flex-col space-y-5 p-5">
+      <section className="flex max-md:flex-col gap-3 px-3 overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.3,
+          }}
+          className="w-full flex-center flex-col space-y-5 p-5"
+        >
           <h1 className="text-pretty max-md:text-7xl text-8xl font-semibold w-full max-w-sm">
             It All Begins with<br className="md:hidden"></br> Small
             <br className="md:hidden"></br> Talk.
@@ -37,15 +46,23 @@ export default function Welcome() {
               </Button>
             </Link>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="max-lg:hidden w-full overflow-hidden px-5">
-          <img
-            src="/assets/app1.png"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.3,
+          }}
+          className="max-lg:hidden h-[45rem] w-full overflow-hidden p-10"
+        >
+          <motion.img
+            src="/assets/Conversation-pana.png"
             alt="sample pic"
             className="w-full h-full object-contain px-5"
           />
-        </div>
+        </motion.div>
       </section>
     </section>
   );
