@@ -1,13 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { welcomeNavigation } from "@/utils";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerFooter,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
-import Footer from "./Footer";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { Menu } from "lucide-react";
 
 export default function WelcomeHeader() {
