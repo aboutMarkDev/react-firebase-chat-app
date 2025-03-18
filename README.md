@@ -59,5 +59,5 @@ VITE_APP_ID=your_app_id
 ```sh
 npm start
 ```
-## Contributors
+## 👥 Contributors
 - aboutMarkDev
